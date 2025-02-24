@@ -47,7 +47,15 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        loadFragments(new FragmentsExample());
+        if(savedInstanceState == null)
+        {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container,new HomeFragment());
+            transaction.commit();
+        };
+
+
+//        loadFragments(new FragmentsExample());
     }
 
     private void loadFragments(Fragment fragment)

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:orientation="horizontal"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ic_launcher_background"
+             android:elevation="8dp"
+             android:padding="10dp"
+    >
+
+
+
+
+
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="0dp"
+        android:text="Home"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/profileBtn"
+        android:text="Profile"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/settingBtn"
+        android:text="Setting"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
