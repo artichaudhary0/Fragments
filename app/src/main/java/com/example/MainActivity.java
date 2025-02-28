@@ -59,20 +59,31 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@Nullable MenuItem item){
                 Fragment selectedFragments = null;
-                switch (item.getItemId())
+
+                if(item.getItemId() == R.id.nav_home)
                 {
-                    case R.id.nav_home:
-                        selectedFragments = new HomeFragment();
-                        break;
-                    case R.id.nav_dashboard:
-                        selectedFragments = new DashboardFragment();
-                        break;
-                    case R.id.nav_profile :
-                        selectedFragments = new ProfileFragment();
-                        break;
-                    default:
-                        break;
+                    selectedFragments = new HomeFragment();
+                }else if(item.getItemId() == R.id.nav_dashboard)
+                {
+                    selectedFragments = new DashboardFragment();
+                } else if (item.getItemId() == R.id.nav_profile) {
+                    selectedFragments = new ProfileFragment();
                 }
+
+//                switch (item.getItemId())
+//                {
+//                    case R.id.nav_home :
+//                        selectedFragments = new HomeFragment();
+//                        break;
+//                    case R.id.nav_dashboard :
+//                        selectedFragments = new DashboardFragment();
+//                        break;
+//                    case R.id.nav_profile :
+//                        selectedFragments = new ProfileFragment();
+//                        break;
+//                    default:
+//                        break;
+//                }
 
                 if(selectedFragments != null)
                 {
