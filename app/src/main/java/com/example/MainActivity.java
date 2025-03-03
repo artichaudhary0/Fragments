@@ -7,6 +7,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.fragments.DashboardFragment;
 import com.example.fragments.HomeFragment;
@@ -54,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new HomeFragment()).commit();
+
+
+        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        ViewPageAdapter adapter = new ViewPageAdapter(this);
+        viewPager.setAdapter(adapter);
+
+
+
+
+
 
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener(){
             @Override
